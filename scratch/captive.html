@@ -1,0 +1,396 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Captive Feasibility Studies - Marsh</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=IBM+Plex+Sans:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "pwc-orange": "#D85604",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed": "#ffdcbe",
+                        "on-surface-variant": "#594238",
+                        "on-primary": "#ffffff",
+                        "primary": "#9f3d00",
+                        "primary-container": "#c74e00",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#874e00",
+                        "on-primary-container": "#fffbff",
+                        "secondary": "#5f5e5e",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2c1600",
+                        "surface-container": "#efeded",
+                        "primary-fixed-dim": "#ffb596",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "background": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fbf9f8",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary-container": "#e4e2e1",
+                        "surface-gray": "#F5F7F8",
+                        "outline-variant": "#e1c0b2",
+                        "slate-mid": "#7D7D7D",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "surface-container-low": "#f5f3f3",
+                        "on-secondary-container": "#656464",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "outline": "#8d7166",
+                        "surface-container-high": "#eae8e7",
+                        "error": "#ba1a1a",
+                        "pwc-red": "#B33D26",
+                        "on-background": "#1b1c1c",
+                        "pwc-tan": "#E3D5C1",
+                        "surface-dim": "#dbd9d9",
+                        "surface-tint": "#a33e00",
+                        "secondary-fixed": "#e4e2e1",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-primary-fixed": "#360f00",
+                        "inverse-surface": "#303030",
+                        "tertiary-container": "#aa6400",
+                        "surface-variant": "#e4e2e2",
+                        "primary-fixed": "#ffdbcd",
+                        "charcoal-dark": "#1A1A1A",
+                        "surface-bright": "#fbf9f8",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "tabular-nums": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "tabular-nums": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: theme('colors.background'); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        /* Subtle ambient shadow for high-end cards */
+        .ambient-shadow {
+            box-shadow: 0 8px 24px -12px rgba(0,0,0,0.06);
+        }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-surface flex overflow-hidden h-screen">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-64 bg-surface-container-low dark:bg-surface-dim border-r border-slate-mid/10 flex flex-col z-40 pt-6 transition-all duration-200 ease-in-out">
+<!-- Header -->
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest border border-slate-mid/10 flex items-center justify-center overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-size: 24px;">domain</span>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md font-bold text-on-surface text-[18px] leading-tight">Risk Analytics</h2>
+<p class="text-label-sm font-label-sm text-secondary">Suite v4.2</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 flex flex-col px-3 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-pwc-orange transition-colors">strategy</span>
+<span class="text-label-sm font-label-sm text-[14px]">Risk Strategy</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-pwc-orange transition-colors">query_stats</span>
+<span class="text-label-sm font-label-sm text-[14px]">Program Optimizer</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-pwc-orange transition-colors">analytics</span>
+<span class="text-label-sm font-label-sm text-[14px]">Loss Analysis</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined icon-fill text-[20px]">shield</span>
+<span class="text-label-sm font-label-sm text-[14px]">Captive Feasibility</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-pwc-orange transition-colors">insights</span>
+<span class="text-label-sm font-label-sm text-[14px]">Portfolio Insights</span>
+</a>
+</div>
+<!-- CTA -->
+<div class="px-6 py-4">
+<button class="w-full bg-pwc-orange hover:bg-primary-container text-on-primary text-label-sm font-label-sm py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                Export Report
+            </button>
+</div>
+<!-- Footer Links -->
+<div class="border-t border-slate-mid/10 p-3 flex flex-col space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 hover:text-on-surface transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="text-label-sm font-label-sm text-[14px]">Support</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 hover:text-on-surface transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-label-sm font-label-sm text-[14px]">Sign Out</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 ml-64 flex flex-col bg-surface min-h-screen overflow-y-auto">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-30 bg-surface border-b border-slate-mid/10">
+<!-- Brand Logo -->
+<div class="flex items-center">
+<img src="{{DATA:IMAGE:IMAGE_9}}" alt="PwC Logo" class="h-8 w-auto object-contain">
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-2">
+<!-- Search (Visual Placeholder) -->
+<div class="relative hidden md:flex items-center mr-4">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 rounded-full border border-slate-mid/20 bg-surface-container-low text-body-md font-body-md focus:outline-none focus:border-pwc-orange focus:ring-1 focus:ring-pwc-orange w-64 transition-all" placeholder="Search analytics..." type="text">
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="w-10 h-10 ml-2 rounded-full border border-slate-mid/20 overflow-hidden cursor-pointer">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI63DVuj0Fs-elD1Ynt1Sm2jngRUnDjGk6lpsXvAb8MB_mpVq3BBk3BPb9egoFGfFCAuz60wy23Me1jlHvorkfCzFiD0WmOmCWwRm3WBTcVYlwnTYp13dbPBQpO5m75990fHBATzlSTcMfmTpXq6u-iL_Ejh47XebKjWuoYiFWQevitptPqsc3NuymvmhNWz3RvGGlI2--QI72Hb-twk2cz3j_m14O3PkicMuUmzhau0bqPZ0gdIJj0y_XYl1U6WjpsQFiW7j48pY">
+</button>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-margin-desktop max-w-[1600px] w-full mx-auto space-y-[48px]">
+<!-- Page Header -->
+<div class="flex flex-col gap-2 max-w-3xl">
+<h1 class="text-display-lg font-display-lg text-on-surface">Captive Feasibility Studies</h1>
+<p class="text-body-lg font-body-lg text-secondary">
+                    Evaluate self-retention structures to optimize long-term Total Cost of Risk (TCOR). This analysis projects structural savings and outlines the operational path to establishing a specialized captive entity.
+                </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Savings Projection Chart (Span 12) -->
+<div class="col-span-12 bg-surface-container-lowest border border-slate-mid/10 rounded-[12px] p-8 ambient-shadow">
+<div class="flex justify-between items-end mb-8 border-b border-slate-mid/10 pb-4">
+<div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">5-Year Savings Projection</h3>
+<p class="text-body-md font-body-md text-secondary">Cumulative Net Present Value comparison (USD Millions)</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-slate-mid/20 border border-slate-mid/30"></span>
+<span class="text-label-sm font-label-sm text-secondary">Traditional Premium</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-pwc-orange"></span>
+<span class="text-label-sm font-label-sm text-secondary">Captive Retained + Premium</span>
+</div>
+</div>
+</div>
+<!-- CSS Bar Chart Representation -->
+<div class="h-[300px] w-full flex items-end justify-between gap-4 pt-6 relative">
+<!-- Y-Axis labels -->
+<div class="absolute left-0 top-0 h-full flex flex-col justify-between text-tabular-nums font-tabular-nums text-secondary text-xs pb-8 -ml-2">
+<span class="">$120M</span>
+<span class="">$90M</span>
+<span class="">$60M</span>
+<span class="">$30M</span>
+<span class="">$0</span>
+</div>
+<!-- Grid lines -->
+<div class="absolute inset-0 pl-12 pb-8 flex flex-col justify-between pointer-events-none">
+<div class="w-full border-t border-slate-mid/10 border-dashed"></div>
+<div class="w-full border-t border-slate-mid/10 border-dashed"></div>
+<div class="w-full border-t border-slate-mid/10 border-dashed"></div>
+<div class="w-full border-t border-slate-mid/10 border-dashed"></div>
+<div class="w-full border-t border-slate-mid/20"></div>
+</div>
+<!-- Data Columns -->
+<div class="flex-1 flex justify-around pl-12 z-10 h-full items-end pb-8">
+<!-- Year 1 -->
+<div class="flex flex-col items-center gap-2 group w-full px-2">
+<div class="flex items-end justify-center w-full gap-1 h-[250px]">
+<div class="w-1/3 bg-slate-mid/20 border border-slate-mid/30 rounded-t-sm h-[80%] transition-all hover:opacity-80"></div>
+<div class="w-1/3 bg-pwc-orange border border-primary-container rounded-t-sm h-[75%] transition-all hover:opacity-80"></div>
+</div>
+<span class="text-tabular-nums font-tabular-nums text-secondary mt-2">Year 1</span>
+</div>
+<!-- Year 2 -->
+<div class="flex flex-col items-center gap-2 group w-full px-2">
+<div class="flex items-end justify-center w-full gap-1 h-[250px]">
+<div class="w-1/3 bg-slate-mid/20 border border-slate-mid/30 rounded-t-sm h-[85%] transition-all hover:opacity-80"></div>
+<div class="w-1/3 bg-pwc-orange border border-primary-container rounded-t-sm h-[70%] transition-all hover:opacity-80"></div>
+</div>
+<span class="text-tabular-nums font-tabular-nums text-secondary mt-2">Year 2</span>
+</div>
+<!-- Year 3 -->
+<div class="flex flex-col items-center gap-2 group w-full px-2">
+<div class="flex items-end justify-center w-full gap-1 h-[250px]">
+<div class="w-1/3 bg-slate-mid/20 border border-slate-mid/30 rounded-t-sm h-[90%] transition-all hover:opacity-80"></div>
+<div class="w-1/3 bg-pwc-orange border border-primary-container rounded-t-sm h-[68%] transition-all hover:opacity-80"></div>
+</div>
+<span class="text-tabular-nums font-tabular-nums text-secondary mt-2">Year 3</span>
+</div>
+<!-- Year 4 -->
+<div class="flex flex-col items-center gap-2 group w-full px-2">
+<div class="flex items-end justify-center w-full gap-1 h-[250px]">
+<div class="w-1/3 bg-slate-mid/20 border border-slate-mid/30 rounded-t-sm h-[95%] transition-all hover:opacity-80"></div>
+<div class="w-1/3 bg-pwc-orange border border-primary-container rounded-t-sm h-[65%] transition-all hover:opacity-80"></div>
+</div>
+<span class="text-tabular-nums font-tabular-nums text-secondary mt-2">Year 4</span>
+</div>
+<!-- Year 5 -->
+<div class="flex flex-col items-center gap-2 group w-full px-2">
+<div class="flex items-end justify-center w-full gap-1 h-[250px]">
+<div class="w-1/3 bg-slate-mid/20 border border-slate-mid/30 rounded-t-sm h-[100%] transition-all hover:opacity-80"></div>
+<div class="w-1/3 bg-pwc-orange border border-primary-container rounded-t-sm h-[60%] transition-all hover:opacity-80"></div>
+</div>
+<span class="text-tabular-nums font-tabular-nums text-on-surface font-bold mt-2">Year 5</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex justify-end">
+<div class="bg-surface-container-low px-4 py-2 rounded-lg border border-slate-mid/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-pwc-orange">trending_down</span>
+<span class="text-body-md font-body-md text-on-surface">Projected 5-Year Savings: <strong class="text-pwc-orange font-tabular-nums">18.4%</strong> ($17.2M)</span>
+</div>
+</div>
+</div>
+<!-- Comparative Analysis (Span 7) -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container-lowest border border-slate-mid/10 rounded-[12px] p-8 ambient-shadow flex flex-col">
+<div class="mb-6">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Structural Comparison</h3>
+<p class="text-body-md font-body-md text-secondary">Qualitative assessment of Traditional vs. Captive models.</p>
+</div>
+<div class="flex-1 overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr>
+<th class="py-4 border-b-2 border-slate-mid/20 text-label-sm font-label-sm text-secondary uppercase tracking-wider w-1/3">Factor</th>
+<th class="py-4 px-4 border-b-2 border-slate-mid/20 text-label-sm font-label-sm text-on-surface uppercase tracking-wider w-1/3 bg-surface-gray/50 rounded-tl-lg">Traditional Insurance</th>
+<th class="py-4 px-4 border-b-2 border-primary border-t-[3px] text-label-sm font-label-sm text-pwc-orange uppercase tracking-wider w-1/3 bg-primary/5 rounded-tr-lg">Single Parent Captive</th>
+</tr>
+</thead>
+<tbody class="text-body-md font-body-md">
+<tr class="border-b border-slate-mid/10 hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 text-on-surface font-medium">Cost Control</td>
+<td class="py-4 px-4 text-secondary">Subject to macro market cycles &amp; standard rates.</td>
+<td class="py-4 px-4 text-on-surface bg-primary/5">Directly correlates to own loss experience.</td>
+</tr>
+<tr class="border-b border-slate-mid/10 hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 text-on-surface font-medium">Cash Flow</td>
+<td class="py-4 px-4 text-secondary">Premiums paid upfront to insurer.</td>
+<td class="py-4 px-4 text-on-surface bg-primary/5">Retain underwriting profit and investment income.</td>
+</tr>
+<tr class="border-b border-slate-mid/10 hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 text-on-surface font-medium">Coverage Access</td>
+<td class="py-4 px-4 text-secondary">Limited by commercial market appetite.</td>
+<td class="py-4 px-4 text-on-surface bg-primary/5">Customizable policy drafting for unique risks.</td>
+</tr>
+<tr class="border-b border-slate-mid/10 hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 text-on-surface font-medium">Admin &amp; Compliance</td>
+<td class="py-4 px-4 text-secondary">Low. Handled by insurer/broker.</td>
+<td class="py-4 px-4 text-on-surface bg-primary/5">High. Requires regulatory reporting &amp; management.</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 text-on-surface font-medium">Capital Requirement</td>
+<td class="py-4 px-4 text-secondary">None beyond premium payment.</td>
+<td class="py-4 px-4 text-on-surface bg-primary/5">Significant upfront capitalization required.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Implementation Roadmap (Span 5) -->
+<div class="col-span-12 lg:col-span-5 bg-surface-container-lowest border border-slate-mid/10 rounded-[12px] p-8 ambient-shadow">
+<div class="mb-8">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Setup Roadmap</h3>
+<p class="text-body-md font-body-md text-secondary">Estimated timeline: 4 - 6 months</p>
+</div>
+<div class="relative pl-4">
+<!-- Vertical line -->
+<div class="absolute left-[23px] top-4 bottom-4 w-[2px] bg-slate-mid/20"></div>
+<!-- Step 1 (Completed/Active) -->
+<div class="flex gap-6 relative mb-8">
+<div class="w-10 h-10 rounded-full bg-pwc-orange text-on-primary flex items-center justify-center shrink-0 z-10 shadow-sm border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="pt-2">
+<h4 class="text-body-lg font-body-lg text-on-surface font-bold">1. Feasibility Study</h4>
+<p class="text-body-md font-body-md text-secondary mt-1">Actuarial forecasting, risk mapping, and financial modeling.</p>
+</div>
+</div>
+<!-- Step 2 (Active) -->
+<div class="flex gap-6 relative mb-8">
+<div class="w-10 h-10 rounded-full bg-surface border-2 border-pwc-orange text-pwc-orange flex items-center justify-center shrink-0 z-10 bg-surface-container-lowest ring-4 ring-primary/10">
+<span class="text-label-sm font-label-sm">2</span>
+</div>
+<div class="pt-2">
+<h4 class="text-body-lg font-body-lg text-pwc-orange font-bold">2. Domicile Selection</h4>
+<p class="text-body-md font-body-md text-secondary mt-1">Evaluate regulatory environments, capital requirements, and tax implications.</p>
+</div>
+</div>
+<!-- Step 3 (Pending) -->
+<div class="flex gap-6 relative mb-8">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-slate-mid/30 text-secondary flex items-center justify-center shrink-0 z-10 border-4 border-surface-container-lowest">
+<span class="text-label-sm font-label-sm">3</span>
+</div>
+<div class="pt-2">
+<h4 class="text-body-lg font-body-lg text-on-surface opacity-60">3. Application &amp; Licensing</h4>
+<p class="text-body-md font-body-md text-secondary mt-1 opacity-60">Submit business plan to regulatory authority and secure license.</p>
+</div>
+</div>
+<!-- Step 4 (Pending) -->
+<div class="flex gap-6 relative">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-slate-mid/30 text-secondary flex items-center justify-center shrink-0 z-10 border-4 border-surface-container-lowest">
+<span class="text-label-sm font-label-sm">4</span>
+</div>
+<div class="pt-2">
+<h4 class="text-body-lg font-body-lg text-on-surface opacity-60">4. Capitalization &amp; Ops</h4>
+<p class="text-body-md font-body-md text-secondary mt-1 opacity-60">Fund the captive, issue policies, and commence ongoing management.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+</body></html>

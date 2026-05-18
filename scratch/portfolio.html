@@ -1,0 +1,278 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Insights - Marsh</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;500&amp;family=IBM+Plex+Sans:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "pwc-orange": "#D85604",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed": "#ffdcbe",
+                        "on-surface-variant": "#594238",
+                        "on-primary": "#ffffff",
+                        "primary": "#9f3d00",
+                        "primary-container": "#c74e00",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#874e00",
+                        "on-primary-container": "#fffbff",
+                        "secondary": "#5f5e5e",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2c1600",
+                        "surface-container": "#efeded",
+                        "primary-fixed-dim": "#ffb596",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "background": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fbf9f8",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary-container": "#e4e2e1",
+                        "surface-gray": "#F5F7F8",
+                        "outline-variant": "#e1c0b2",
+                        "slate-mid": "#7D7D7D",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "surface-container-low": "#f5f3f3",
+                        "on-secondary-container": "#656464",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "outline": "#8d7166",
+                        "surface-container-high": "#eae8e7",
+                        "error": "#ba1a1a",
+                        "pwc-red": "#B33D26",
+                        "on-background": "#1b1c1c",
+                        "pwc-tan": "#E3D5C1",
+                        "surface-dim": "#dbd9d9",
+                        "surface-tint": "#a33e00",
+                        "secondary-fixed": "#e4e2e1",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-primary-fixed": "#360f00",
+                        "inverse-surface": "#303030",
+                        "tertiary-container": "#aa6400",
+                        "surface-variant": "#e4e2e2",
+                        "primary-fixed": "#ffdbcd",
+                        "charcoal-dark": "#1A1A1A",
+                        "surface-bright": "#fbf9f8",
+                        "on-error-container": "#93000a"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Hanken Grotesk"],
+                        "tabular-nums": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["IBM Plex Sans"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "tabular-nums": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-50 border-b border-slate-mid/10 bg-surface dark:bg-surface-container-high">
+<div class="flex items-center gap-4"><img src="{{DATA:IMAGE:IMAGE_9}}" alt="PwC Logo" class="h-10 w-auto object-contain"></div>
+<!-- Right Actions -->
+<div class="flex items-center gap-6">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="pl-9 pr-4 py-1.5 bg-surface-container-highest border-b border-slate-mid/30 focus:border-pwc-orange focus:ring-0 outline-none text-tabular-nums font-tabular-nums w-64 transition-colors" placeholder="Search..." type="text">
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant dark:text-on-secondary-fixed-variant"><img src="{{DATA:IMAGE:IMAGE_9}}" alt="PwC Logo" class="h-10 w-auto object-contain"></div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full w-64 border-r border-slate-mid/10 fixed left-0 top-0 z-40 pt-16 bg-surface-container-low dark:bg-surface-dim transition-all duration-200 ease-in-out">
+<div class="p-6 pb-2">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center border border-slate-mid/20">
+<span class="material-symbols-outlined text-pwc-orange">domain</span>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md font-bold text-on-surface text-sm">Risk Analytics</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Suite v4.2</p>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-4 flex flex-col gap-1">
+<!-- Inactive Tab -->
+<a class="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">strategy</span>
+<span class="text-label-sm font-label-sm">Risk Strategy</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="text-label-sm font-label-sm">Program Optimizer</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-label-sm font-label-sm">Loss Analysis</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">shield</span>
+<span class="text-label-sm font-label-sm">Captive Feasibility</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-6 py-3 text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="text-label-sm font-label-sm">Portfolio Insights</span>
+</a>
+</div>
+<div class="p-4 border-t border-slate-mid/10 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-2 text-secondary hover:bg-secondary-container/50 hover:text-on-surface rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span class="text-label-sm font-label-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-secondary hover:bg-secondary-container/50 hover:text-on-surface rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span class="text-label-sm font-label-sm">Sign Out</span>
+</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 bg-background min-h-[calc(100vh-4rem)] p-gutter md:p-margin-desktop overflow-y-auto">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+<div>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-2">Executive Summary</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">High-level portfolio performance and structural optimization overview for Q3.</p>
+</div>
+<button class="bg-pwc-orange text-on-primary px-6 py-3 rounded text-label-sm font-label-sm hover:bg-primary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Export Full Executive Report
+                </button>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit auto-rows-min">
+<!-- Hero KPI: Annualized Savings -->
+<div class="lg:col-span-12 bg-surface-container-lowest border border-slate-mid/10 rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Projected Annualized Savings</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Based on proposed optimal structure vs current baseline.</p>
+</div>
+<div class="text-right">
+<div class="text-[64px] leading-none font-display-lg text-pwc-orange font-extrabold tracking-tight">$14.2M</div>
+<div class="flex items-center justify-end gap-1 text-green-600 mt-2">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-tabular-nums font-tabular-nums">+8.5% Efficiency Gain</span>
+</div>
+</div>
+</div>
+<!-- Balance Sheet Impact -->
+<div class="lg:col-span-7 bg-surface-container-lowest border border-slate-mid/10 rounded-lg p-6 flex flex-col gap-6">
+<div class="flex justify-between items-center border-b border-slate-mid/10 pb-4">
+<h3 class="text-headline-md font-headline-md text-on-surface">Balance Sheet Impact</h3>
+<button class="text-secondary hover:text-pwc-orange"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-gray p-4 rounded border border-slate-mid/5">
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Retained Risk</div>
+<div class="text-headline-lg font-headline-lg text-on-surface">$45.0M</div>
+<div class="text-tabular-nums font-tabular-nums text-slate-mid mt-1">Current: $52.5M</div>
+</div>
+<div class="bg-surface-gray p-4 rounded border border-slate-mid/5">
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Capital Released</div>
+<div class="text-headline-lg font-headline-lg text-on-surface">$7.5M</div>
+<div class="text-tabular-nums font-tabular-nums text-slate-mid mt-1">Available for redeployment</div>
+</div>
+</div>
+<!-- Abstract Chart Area -->
+<div class="flex-1 bg-surface-container-low rounded border border-slate-mid/10 min-h-[160px] flex items-end p-4 gap-2 relative">
+<div class="absolute top-4 left-4 text-label-sm font-label-sm text-on-surface-variant">Capital Allocation Shift</div>
+<!-- Decorative Bar Chart representation -->
+<div class="w-1/3 bg-slate-mid/20 h-[60%] rounded-t"></div>
+<div class="w-1/3 bg-slate-mid/40 h-[80%] rounded-t"></div>
+<div class="w-1/3 bg-pwc-orange/80 h-[40%] rounded-t"></div>
+</div>
+</div>
+<!-- Optimal Structure Summary -->
+<div class="lg:col-span-5 bg-surface-container-lowest border border-slate-mid/10 rounded-lg p-6 flex flex-col gap-6">
+<div class="flex justify-between items-center border-b border-slate-mid/10 pb-4">
+<h3 class="text-headline-md font-headline-md text-on-surface">Optimal Structure</h3>
+<span class="material-symbols-outlined text-secondary">architecture</span>
+</div>
+<div class="flex flex-col gap-4 flex-1">
+<div class="flex justify-between items-center py-2 border-b border-slate-mid/5">
+<span class="text-body-md font-body-md text-on-surface-variant">Primary Limit</span>
+<span class="text-tabular-nums font-tabular-nums text-on-surface font-semibold">$100M</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-mid/5">
+<span class="text-body-md font-body-md text-on-surface-variant">Attachment Point</span>
+<span class="text-tabular-nums font-tabular-nums text-on-surface font-semibold">$25M</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-mid/5">
+<span class="text-body-md font-body-md text-on-surface-variant">Captive Utilization</span>
+<span class="text-tabular-nums font-tabular-nums text-on-surface font-semibold">Yes (Tier 2)</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-body-md font-body-md text-on-surface-variant">Estimated Premium</span>
+<span class="text-tabular-nums font-tabular-nums text-on-surface font-semibold">$18.4M</span>
+</div>
+</div>
+<div class="mt-auto pt-4">
+<button class="w-full py-2 border border-slate-mid/20 text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-gray transition-colors">
+                            View Detailed Layer Chart
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+</body></html>
