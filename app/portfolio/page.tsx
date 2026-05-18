@@ -5,14 +5,14 @@ export default function Page() {
 
 
 <header className="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-50 border-b border-slate-mid/10 bg-surface dark:bg-surface-container-high">
-<div className="flex items-center gap-4"><img src="/logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></div>
+<div className="flex items-center gap-4"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></div>
 
 <div className="flex items-center gap-6">
 <div className="relative hidden md:block">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
 <input className="pl-9 pr-4 py-1.5 bg-surface-container-highest border-b border-slate-mid/30 focus:border-pwc-orange focus:ring-0 outline-none text-tabular-nums font-tabular-nums w-64 transition-colors" placeholder="Search..." type="text" />
 </div>
-<div className="flex items-center gap-4 text-on-surface-variant dark:text-on-secondary-fixed-variant"><img src="/logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></div>
+<div className="flex items-center gap-4 text-on-surface-variant dark:text-on-secondary-fixed-variant"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></div>
 </div>
 </header>
 <div className="flex flex-1 overflow-hidden">

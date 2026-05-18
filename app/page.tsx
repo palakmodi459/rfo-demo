@@ -21,7 +21,7 @@ export default function Page() {
 <nav className="hidden md:flex flex-col h-full w-64 border-r border-slate-mid/10 bg-surface-container-low dark:bg-surface-dim fixed left-0 top-0 z-40 pt-16">
 <div className="px-6 mb-8">
 <div className="flex items-center gap-3 mb-6">
-<img src="/logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" />
 <div>
 <h2 className="text-headline-md font-headline-md font-bold text-on-surface">Risk Analytics</h2>
 <p className="text-label-sm font-label-sm text-secondary">Suite v4.2</p>
@@ -80,7 +80,7 @@ export default function Page() {
 <main className="flex-1 md:ml-64 flex flex-col min-h-screen">
 
 <header className="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-50 border-b border-slate-mid/10 bg-surface dark:bg-surface-container-high md:hidden">
-<img src="/logo.svg" alt="PwC Logo" className="h-8 w-auto object-contain" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-8 w-auto object-contain" />
 <div className="flex gap-4 items-center text-primary dark:text-primary-fixed-dim">
 <button className="hover:bg-surface-container-low dark:hover:bg-inverse-surface transition-colors duration-200 p-2 rounded-full cursor-pointer active:opacity-80 transition-all">
 <span className="material-symbols-outlined">notifications</span>

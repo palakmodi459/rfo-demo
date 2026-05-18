@@ -82,7 +82,7 @@ export default function Page() {
 
 <header className="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-50 border-b border-slate-mid/10 bg-surface">
 <div className="flex items-center">
-<span className="text-headline-md font-headline-md font-black text-pwc-orange"><img src="/logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></span>
+<span className="text-headline-md font-headline-md font-black text-pwc-orange"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></span>
 </div>
 <div className="flex items-center gap-4">
 <div className="relative hidden md:block">

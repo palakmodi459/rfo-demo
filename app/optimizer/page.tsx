@@ -7,7 +7,7 @@ export default function Page() {
 <nav className="fixed left-0 top-0 h-full w-64 border-r border-slate-mid/10 bg-surface-container-low dark:bg-surface-dim z-40 pt-16 flex flex-col justify-between">
 
 <div className="px-6 mb-8 flex flex-col items-start w-full">
-  <img src="/logo.svg" alt="PwC Logo" className="h-10 w-auto mb-4" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto mb-4" />
   <h2 className="text-headline-md font-headline-md font-bold text-on-surface">Risk Analytics</h2>
   <p className="text-label-sm font-label-sm text-secondary mt-1">Suite v4.2</p>
 </div>
