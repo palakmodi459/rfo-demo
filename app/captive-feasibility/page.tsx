@@ -7,9 +7,7 @@ export default function Page() {
 <nav className="fixed left-0 top-0 h-full w-64 bg-surface-container-low dark:bg-surface-dim border-r border-slate-mid/10 flex flex-col z-40 pt-6 transition-all duration-200 ease-in-out">
 
 <div className="px-6 mb-8 flex items-center gap-3">
-<div className="w-10 h-10 rounded-lg bg-surface-container-highest border border-slate-mid/10 flex items-center justify-center overflow-hidden shrink-0">
-<span className="material-symbols-outlined text-secondary" style={{ fontSize: "24px" }}>domain</span>
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain shrink-0" />
 <div>
 <h2 className="text-headline-md font-headline-md font-bold text-on-surface text-[18px] leading-tight">Risk Analytics</h2>
 <p className="text-label-sm font-label-sm text-secondary">Suite v4.2</p>
@@ -61,29 +59,7 @@ export default function Page() {
 
 <div className="flex-1 ml-64 flex flex-col bg-surface min-h-screen overflow-y-auto">
 
-<header className="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-30 bg-surface border-b border-slate-mid/10">
 
-<div className="flex items-center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-8 w-auto object-contain" />
-</div>
-
-<div className="flex items-center gap-2">
-
-<div className="relative hidden md:flex items-center mr-4">
-<span className="material-symbols-outlined absolute left-3 text-secondary text-[20px]">search</span>
-<input className="pl-10 pr-4 py-2 rounded-full border border-slate-mid/20 bg-surface-container-low text-body-md font-body-md focus:outline-none focus:border-pwc-orange focus:ring-1 focus:ring-pwc-orange w-64 transition-all" placeholder="Search analytics..." type="text" />
-</div>
-<button className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 cursor-pointer active:opacity-80">
-<span className="material-symbols-outlined">notifications</span>
-</button>
-<button className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 cursor-pointer active:opacity-80">
-<span className="material-symbols-outlined">settings</span>
-</button>
-<button className="w-10 h-10 ml-2 rounded-full border border-slate-mid/20 overflow-hidden cursor-pointer">
-<div className="w-full h-full bg-surface-container flex items-center justify-center text-secondary"><span className="material-symbols-outlined text-[20px]">person</span></div>
-</button>
-</div>
-</header>
 
 <main className="flex-1 p-margin-desktop max-w-[1600px] w-full mx-auto space-y-[48px]">
 

@@ -103,95 +103,119 @@ export default function Page() {
 
 <div className="col-span-12 lg:col-span-8 space-y-gutter">
 
-<div className="bg-surface border border-slate-mid/10 rounded-lg p-6 shadow-ambient">
-<div className="flex justify-between items-center mb-6 border-b border-slate-mid/10 pb-4">
-<h3 className="text-headline-md font-headline-md text-on-surface">Insurance Options Comparison</h3>
+<div className="bg-white border border-slate-mid/10 rounded-xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+  {/* Header & Subtitle */}
+  <div className="mb-8">
+    <h3 className="text-display-sm font-display-sm text-on-surface mb-2">Economic Value of Insurance</h3>
+    <div className="flex items-center text-body-md text-secondary">
+      <span className="material-symbols-outlined text-pwc-red mr-2 text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>warning</span>
+      <span className="font-semibold text-pwc-orange mr-1">Option 1</span>
+      provides an overall net cost of 57.5K vs
+      <span className="font-semibold text-slate-800 ml-1">No Insurance</span>
+    </div>
+  </div>
 
-<div className="flex space-x-6">
-<div className="flex items-center">
-<div className="w-3 h-3 rounded-sm bg-pwc-red mr-2"></div>
-<span className="text-label-sm font-label-sm text-secondary">Retained</span>
-</div>
-<div className="flex items-center">
-<div className="w-3 h-3 rounded-sm bg-pwc-tan mr-2"></div>
-<span className="text-label-sm font-label-sm text-secondary">Captive</span>
-</div>
-<div className="flex items-center">
-<div className="w-3 h-3 rounded-sm bg-pwc-orange mr-2"></div>
-<span className="text-label-sm font-label-sm text-secondary">Transferred</span>
-</div>
-</div>
-</div>
+  {/* Legend */}
+  <div className="flex flex-wrap items-center justify-start gap-x-8 gap-y-4 mb-10 w-full">
+    <div className="flex items-center">
+      <div className="w-4 h-4 rounded-sm bg-slate-800 mr-3 border border-slate-900/10"></div>
+      <span className="text-label-md font-label-md text-secondary">Retained Loss</span>
+    </div>
+    <div className="flex items-center">
+      <div className="w-4 h-4 rounded-sm bg-pwc-orange mr-3 border border-pwc-orange/20"></div>
+      <span className="text-label-md font-label-md text-secondary">Premium</span>
+    </div>
+    <div className="flex items-center">
+      <div className="w-4 h-4 rounded-sm bg-pwc-tan mr-3 border border-pwc-tan/20"></div>
+      <span className="text-label-md font-label-md text-secondary">Implied Risk Charge</span>
+    </div>
+    <div className="flex items-center">
+      <div className="w-4 h-4 rounded-sm bg-amber-500 mr-3 border border-amber-600/20"></div>
+      <span className="text-label-md font-label-md text-secondary">Price To Beat</span>
+    </div>
+  </div>
 
-<div className="h-[320px] w-full flex items-end justify-around pb-8 relative mt-8">
+  {/* Chart Area */}
+  <div className="relative h-[400px] w-full flex items-end pl-16 pb-12 pt-4">
+    
+    {/* Y-Axis Label */}
+    <div className="absolute left-[-30px] top-1/2 -rotate-90 text-label-sm font-label-sm text-secondary tracking-wider transform -translate-y-1/2 whitespace-nowrap">
+      Cost of Risk ($)
+    </div>
 
-<div className="absolute inset-0 flex flex-col justify-between pb-8 z-0">
-<div className="border-t border-slate-mid/10 w-full h-0 flex items-center"><span className="text-label-sm font-label-sm text-secondary-fixed-dim bg-surface pr-2 -translate-y-1/2 -translate-x-full absolute left-0">$100M</span></div>
-<div className="border-t border-slate-mid/10 w-full h-0 flex items-center"><span className="text-label-sm font-label-sm text-secondary-fixed-dim bg-surface pr-2 -translate-y-1/2 -translate-x-full absolute left-0">$75M</span></div>
-<div className="border-t border-slate-mid/10 w-full h-0 flex items-center"><span className="text-label-sm font-label-sm text-secondary-fixed-dim bg-surface pr-2 -translate-y-1/2 -translate-x-full absolute left-0">$50M</span></div>
-<div className="border-t border-slate-mid/10 w-full h-0 flex items-center"><span className="text-label-sm font-label-sm text-secondary-fixed-dim bg-surface pr-2 -translate-y-1/2 -translate-x-full absolute left-0">$25M</span></div>
-<div className="border-t border-slate-mid/20 w-full h-0 flex items-center"><span className="text-label-sm font-label-sm text-secondary-fixed-dim bg-surface pr-2 -translate-y-1/2 -translate-x-full absolute left-0">$0M</span></div>
-</div>
+    {/* Y-Axis Grid & Labels */}
+    <div className="absolute inset-0 pl-16 pb-12 pt-4 flex flex-col justify-between pointer-events-none z-0">
+      <div className="w-full h-0 border-t border-slate-200 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">90M</span></div>
+      <div className="w-full h-0 border-t border-slate-200 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">75M</span></div>
+      <div className="w-full h-0 border-t border-slate-200 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">60M</span></div>
+      <div className="w-full h-0 border-t border-slate-200 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">45M</span></div>
+      <div className="w-full h-0 border-t border-slate-200 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">30M</span></div>
+      <div className="w-full h-0 border-t border-slate-200 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">15M</span></div>
+      <div className="w-full h-0 border-t border-slate-300 flex items-center relative"><span className="absolute left-[-50px] text-label-sm text-secondary w-[40px] text-right">0</span></div>
+    </div>
 
-<div className="flex space-x-2 z-10 w-32 justify-center group relative">
+    {/* Bars */}
+    <div className="relative z-10 w-full h-full flex justify-around items-end">
+      
+      {/* Bar 1: No Insurance (Total: 80M = 89% of 90M) */}
+      <div className="w-16 flex flex-col justify-end group h-full">
+        <div className="w-full h-[89%] flex flex-col justify-end hover:brightness-110 transition-all cursor-pointer shadow-sm relative">
+          <div className="bg-pwc-tan w-full h-[21%] border-b border-white/20"></div>
+          <div className="bg-slate-800 w-full h-[79%]"></div>
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="material-symbols-outlined text-secondary hover:text-pwc-orange cursor-pointer text-[20px]">add_circle</span>
+          </div>
+        </div>
+      </div>
 
-<div className="w-10 flex flex-col justify-end h-[240px]">
-<div className="bg-pwc-orange w-full h-[40%] rounded-t-sm hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-tan w-full h-[10%] hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-red w-full h-[50%] hover:brightness-110 transition-all"></div>
-</div>
+      {/* Bar 2: Expiring Program (Total: 73M = 81% of 90M) */}
+      <div className="w-16 flex flex-col justify-end group h-full">
+        <div className="w-full h-[81%] flex flex-col justify-end hover:brightness-110 transition-all cursor-pointer shadow-sm relative">
+          <div className="bg-pwc-tan w-full h-[14%] border-b border-white/20"></div>
+          <div className="bg-pwc-orange w-full h-[33%] border-b border-white/20"></div>
+          <div className="bg-slate-800 w-full h-[53%]"></div>
+        </div>
+      </div>
 
-<div className="w-10 flex flex-col justify-end h-[210px]">
-<div className="bg-pwc-orange w-full h-[30%] rounded-t-sm hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-tan w-full h-[35%] hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-red w-full h-[35%] hover:brightness-110 transition-all"></div>
-</div>
-<div className="absolute -bottom-8 text-label-sm font-label-sm text-secondary text-center w-full">50% Prob</div>
-</div>
+      {/* Bar 3: Option 1 (Total: 72M = 80% of 90M) */}
+      <div className="w-16 flex flex-col justify-end group h-full">
+        <div className="w-full h-[80%] flex flex-col justify-end hover:brightness-110 transition-all cursor-pointer shadow-sm relative">
+          <div className="bg-pwc-tan w-full h-[15%] border-b border-white/20"></div>
+          <div className="bg-amber-500 w-full h-[25%] border-b border-white/20"></div>
+          <div className="bg-slate-800 w-full h-[60%]"></div>
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="material-symbols-outlined text-secondary hover:text-pwc-orange cursor-pointer text-[20px]">add_circle</span>
+          </div>
+        </div>
+      </div>
 
-<div className="flex space-x-2 z-10 w-32 justify-center group relative">
-<div className="w-10 flex flex-col justify-end h-[270px]">
-<div className="bg-pwc-orange w-full h-[45%] rounded-t-sm hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-tan w-full h-[15%] hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-red w-full h-[40%] hover:brightness-110 transition-all"></div>
-</div>
-<div className="w-10 flex flex-col justify-end h-[240px]">
-<div className="bg-pwc-orange w-full h-[35%] rounded-t-sm hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-tan w-full h-[40%] hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-red w-full h-[25%] hover:brightness-110 transition-all"></div>
-</div>
-<div className="absolute -bottom-8 text-label-sm font-label-sm text-secondary text-center w-full">75% Prob</div>
-</div>
+      {/* Bar 4: Option 2 (Total: 72M = 80% of 90M) */}
+      <div className="w-16 flex flex-col justify-end group h-full">
+        <div className="w-full h-[80%] flex flex-col justify-end hover:brightness-110 transition-all cursor-pointer shadow-sm relative">
+          <div className="bg-pwc-tan w-full h-[14%] border-b border-white/20"></div>
+          <div className="bg-pwc-orange w-full h-[26%] border-b border-white/20"></div>
+          <div className="bg-slate-800 w-full h-[60%]"></div>
+        </div>
+      </div>
 
-<div className="flex space-x-2 z-10 w-32 justify-center group relative">
-<div className="w-10 flex flex-col justify-end h-[300px]">
-<div className="bg-pwc-orange w-full h-[55%] rounded-t-sm hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-tan w-full h-[15%] hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-red w-full h-[30%] hover:brightness-110 transition-all"></div>
-</div>
-<div className="w-10 flex flex-col justify-end h-[280px]">
-<div className="bg-pwc-orange w-full h-[45%] rounded-t-sm hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-tan w-full h-[35%] hover:brightness-110 transition-all border-b border-white/20"></div>
-<div className="bg-pwc-red w-full h-[20%] hover:brightness-110 transition-all"></div>
-</div>
-<div className="absolute -bottom-8 text-label-sm font-label-sm text-secondary text-center w-full">95% Prob</div>
-</div>
-</div>
+    </div>
 
-<div className="flex justify-around mt-4 pt-4 border-t border-slate-mid/10 px-[10%]">
-<div className="flex space-x-6">
-<span className="text-label-sm font-label-sm text-slate-mid">Current</span>
-<span className="text-label-sm font-label-sm text-pwc-orange font-bold">Optimized</span>
-</div>
-<div className="flex space-x-6">
-<span className="text-label-sm font-label-sm text-slate-mid">Current</span>
-<span className="text-label-sm font-label-sm text-pwc-orange font-bold">Optimized</span>
-</div>
-<div className="flex space-x-6">
-<span className="text-label-sm font-label-sm text-slate-mid">Current</span>
-<span className="text-label-sm font-label-sm text-pwc-orange font-bold">Optimized</span>
-</div>
-</div>
+    {/* X-Axis Labels (Program) */}
+    <div className="absolute bottom-0 left-0 w-full h-12 flex pl-16">
+      <div className="absolute left-0 bottom-3">
+        <span className="text-label-sm font-label-sm text-secondary font-bold">Program</span>
+      </div>
+      <div className="flex-1 flex justify-around items-stretch border border-slate-200 rounded-md bg-surface-gray/30 overflow-hidden">
+        <div className="text-label-sm font-label-sm text-slate-700 flex-1 flex items-center justify-center border-r border-slate-200">No Insurance</div>
+        <div className="text-label-sm font-label-sm text-slate-700 flex-1 flex items-center justify-center border-r border-slate-200">Expiring Program</div>
+        <div className="text-label-sm font-label-sm text-slate-700 flex-1 flex items-center justify-center border-r border-slate-200">Option 1</div>
+        <div className="text-label-sm font-label-sm text-slate-800 font-bold flex-1 bg-white flex items-center justify-center shadow-sm">
+          Option 2
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <div className="bg-surface border border-slate-mid/10 rounded-lg shadow-ambient overflow-hidden">

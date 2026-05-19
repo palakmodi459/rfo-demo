@@ -4,14 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Page() {
-  const [remoteRisk, setRemoteRisk] = useState(80);
-  const [likelyRisk, setLikelyRisk] = useState(20);
-  const [catastrophicRisk, setCatastrophicRisk] = useState(95);
-
   const handleReset = () => {
-    setRemoteRisk(80);
-    setLikelyRisk(20);
-    setCatastrophicRisk(95);
+    // Reset functionality placeholder
   };
 
   return (
@@ -107,125 +101,290 @@ export default function Page() {
 
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-<div className="col-span-1 lg:col-span-2 bg-white rounded-xl border border-slate-mid/10 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div className="col-span-1 lg:col-span-3 bg-white rounded-xl border border-slate-mid/10 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
 <div className="flex items-center gap-2 mb-4">
 <span className="material-symbols-outlined text-pwc-orange">account_balance</span>
 <h3 className="text-headline-md font-headline-md text-on-surface">Current Strategy: Moderate Retention</h3>
 </div>
 <p className="text-body-md font-body-md text-secondary mb-6 max-w-2xl">
-                        Your current program favors retaining predictable, high-frequency losses while transferring severity risk above $5M. Market conditions suggest optimizing the buffer layer ( $1M - $5M ) could yield a 12% premium reduction.
+                        Your current program features a $25M deductible, retaining significant high-frequency losses while transferring extreme severity risk up to a $3B limit. Analytics suggest that incorporating a Captive layer ($50M) could lower market premiums and optimize your overall Total Cost of Risk.
                     </p>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 <div className="p-4 bg-surface-gray rounded border border-slate-mid/5">
 <p className="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-1">Total Retained</p>
-<p className="text-headline-lg font-headline-lg font-tabular-nums text-on-surface">$12.5M</p>
+<p className="text-headline-lg font-headline-lg font-tabular-nums text-on-surface">$39M</p>
 </div>
 <div className="p-4 bg-surface-gray rounded border border-slate-mid/5">
-<p className="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-1">Total Transferred</p>
-<p className="text-headline-lg font-headline-lg font-tabular-nums text-on-surface">$50.0M</p>
+<p className="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-1">Risk Charge</p>
+<p className="text-headline-lg font-headline-lg font-tabular-nums text-on-surface">$10M</p>
 </div>
 <div className="p-4 bg-surface-gray rounded border border-slate-mid/5">
 <p className="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-1">Est. Premium</p>
-<p className="text-headline-lg font-headline-lg font-tabular-nums text-on-surface">$4.2M</p>
+<p className="text-headline-lg font-headline-lg font-tabular-nums text-on-surface">$24M</p>
 </div>
 <div className="p-4 bg-surface-gray rounded border border-slate-mid/5">
 <p className="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-1">Implied TCOR</p>
-<p className="text-headline-lg font-headline-lg font-tabular-nums text-pwc-orange">$17.1M</p>
+<p className="text-headline-lg font-headline-lg font-tabular-nums text-pwc-orange">$63M</p>
+</div>
 </div>
 </div>
 </div>
 
-<div className="col-span-1 bg-white rounded-xl border border-slate-mid/10 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col">
-<h3 className="text-headline-md font-headline-md text-on-surface mb-6">Risk Tolerance</h3>
-<div className="space-y-6 flex-1">
+<div className="flex flex-col space-y-6 mt-6">
+  <div className="bg-white rounded-xl border border-slate-mid/10 p-8 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+    <h3 className="text-headline-md font-headline-md text-on-surface mb-4">Risk Tolerance Levels</h3>
+    <div className="text-body-md font-body-md text-secondary space-y-4 mb-8 max-w-5xl">
+      <p>
+        Risk Tolerance is the maximum acceptable level of unexpected losses an organization is able to absorb. It takes into account internal and external constraints that may apply to the business. Risk Tolerance is expressed in unexpected loss amount by unit of claim and/or per year (aggregate amount). It can also be defined by multi-year periods.
+      </p>
+    </div>
 
-<div>
-<div className="flex justify-between mb-2">
-<label className="text-label-sm font-label-sm text-on-surface">Remote Risk (&lt;10% Prob)</label>
-<span className="text-label-sm font-label-sm font-tabular-nums text-secondary">High Transfer</span>
-</div>
-<input className="w-full appearance-none bg-transparent" max="100" min="0" type="range" value={remoteRisk} onChange={(e) => setRemoteRisk(Number(e.target.value))} />
-<div className="flex justify-between mt-1 text-[10px] text-slate-mid">
-<span className="">Retain All</span>
-<span className="">Transfer All</span>
-</div>
-</div>
+    {/* Graph Container */}
+    <div className="relative w-full h-[450px] mt-16 bg-surface-gray/30 border border-slate-mid/10 rounded-lg p-6 flex flex-col overflow-visible pt-12 pb-4">
+       {/* Y-Axis Label */}
+       <div className="absolute left-1 top-1/2 -translate-y-1/2 -rotate-90 text-label-sm font-label-sm text-secondary font-bold tracking-widest z-20">
+         Probability ▶
+       </div>
+       
+       <div className="ml-12 flex-1 relative flex flex-col">
+         {/* Main Chart Area */}
+         <div className="flex-1 relative">
+           
+           {/* SVG Curve */}
+           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1000 400">
+             <defs>
+               <linearGradient id="curveGradient" x1="0" y1="0" x2="0" y2="1">
+                 <stop offset="0%" stopColor="#D85604" stopOpacity="0.4" />
+                 <stop offset="100%" stopColor="#D85604" stopOpacity="0.0" />
+               </linearGradient>
+             </defs>
+             <path 
+               d="M 0 400 C 50 400, 100 350, 150 150 C 180 50, 220 50, 250 150 C 300 300, 400 380, 600 390 C 800 400, 1000 400, 1000 400 Z" 
+               fill="url(#curveGradient)" 
+               stroke="#D85604" 
+               strokeWidth="3" 
+             />
+           </svg>
 
-<div>
-<div className="flex justify-between mb-2">
-<label className="text-label-sm font-label-sm text-on-surface">Likely Risk (&gt;50% Prob)</label>
-<span className="text-label-sm font-label-sm font-tabular-nums text-secondary">High Retention</span>
-</div>
-<input className="w-full appearance-none bg-transparent" max="100" min="0" type="range" value={likelyRisk} onChange={(e) => setLikelyRisk(Number(e.target.value))} />
-<div className="flex justify-between mt-1 text-[10px] text-slate-mid">
-<span className="">Retain All</span>
-<span className="">Transfer All</span>
-</div>
-</div>
+           {/* Expected cost marker */}
+           <div className="absolute bottom-[20px] left-[15%] md:left-[18%] flex flex-col items-center">
+             <div className="w-[1px] h-24 bg-slate-400 border-dashed border-l border-slate-400"></div>
+             <div className="bg-surface-container-highest px-3 py-2 rounded text-xs text-center border border-slate-mid/20 shadow-sm mt-1 text-secondary leading-tight">
+               Annual expected<br/>cost of risk
+             </div>
+           </div>
 
-<div>
-<div className="flex justify-between mb-2">
-<label className="text-label-sm font-label-sm text-on-surface">Catastrophic Risk</label>
-<span className="text-label-sm font-label-sm font-tabular-nums text-secondary">Max Transfer</span>
-</div>
-<input className="w-full appearance-none bg-transparent" max="100" min="0" type="range" value={catastrophicRisk} onChange={(e) => setCatastrophicRisk(Number(e.target.value))} />
-<div className="flex justify-between mt-1 text-[10px] text-slate-mid">
-<span className="">Retain All</span>
-<span className="">Transfer All</span>
-</div>
-</div>
-</div>
-</div>
+           {/* L1 Threshold Line */}
+           <div className="absolute top-0 bottom-0 left-[35%] w-0 border-l-2 border-slate-800 border-dashed z-10 flex flex-col items-center">
+              <div className="bg-[#111827] text-white text-[11px] font-bold px-3 py-1.5 rounded mt-[-15px] shadow-md whitespace-nowrap">
+                 Tolerance level 1
+              </div>
+              <div className="text-sm font-bold text-on-surface mt-[-40px] absolute whitespace-nowrap">$7M</div>
+           </div>
+
+           {/* L2 Threshold Line */}
+           <div className="absolute top-0 bottom-0 left-[65%] w-0 border-l-2 border-slate-800 border-dashed z-10 flex flex-col items-center">
+              <div className="bg-[#111827] text-white text-[11px] font-bold px-3 py-1.5 rounded mt-[-15px] shadow-md whitespace-nowrap">
+                 Tolerance level 2
+              </div>
+              <div className="text-sm font-bold text-on-surface mt-[-40px] absolute whitespace-nowrap">$96M</div>
+           </div>
+
+           {/* Floating Info Boxes using CSS clip-path to look like ribbons/arrows */}
+           <div 
+             className="absolute top-[35%] left-[17%] w-[17%] bg-[#FFB600] text-black p-3 shadow-md text-xs text-center flex items-center justify-center min-h-[70px] z-20 font-medium"
+             style={{ clipPath: 'polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%)' }}
+           >
+              Low impact
+           </div>
+           
+           <div 
+             className="absolute top-[30%] left-[36%] w-[28%] bg-pwc-orange text-white p-4 shadow-md text-xs text-center flex items-center justify-center min-h-[90px] z-20 pl-8 pr-6 font-medium leading-relaxed"
+             style={{ clipPath: 'polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%)' }}
+           >
+              Significant impact on KPIs, may affect shareholder value but does not lead to financial stress.
+           </div>
+
+           <div 
+             className="absolute top-[30%] left-[66%] w-[28%] bg-pwc-red text-white p-4 shadow-md text-xs text-center flex items-center justify-center min-h-[90px] z-20 pl-8 rounded-r-md font-medium leading-relaxed"
+             style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 5% 50%)' }}
+           >
+              Need for financing operations or capital increase.
+           </div>
+
+         </div>
+
+         {/* X Axis Zones */}
+         <div className="h-8 flex mt-3 relative z-20 overflow-hidden rounded">
+            <div className="w-[35%] bg-[#FFB600] flex items-center justify-center text-[10px] text-black font-bold tracking-widest">
+               ANNUAL OVER-PERFORMANCE
+            </div>
+            <div className="w-[30%] bg-pwc-orange flex items-center justify-center text-[10px] text-white font-bold tracking-widest">
+               AVERAGE SEVERITY
+            </div>
+            <div className="w-[35%] bg-pwc-red flex items-center justify-center text-[10px] text-white font-bold tracking-widest">
+               HIGH SEVERITY
+            </div>
+         </div>
+         <div className="flex relative mt-2 text-[11px] text-secondary font-medium">
+            <div className="w-[35%] text-left pl-1">Cost of risk lower than expected.</div>
+            <div className="w-[30%] text-center">Affordable cost drift.</div>
+            <div className="w-[35%] text-right pr-1">Unaffordable cost drift.</div>
+         </div>
+
+         {/* X Axis Label */}
+         <div className="text-center mt-3 text-label-sm font-label-sm text-on-surface font-bold tracking-widest">
+            Claims ▶
+         </div>
+
+       </div>
+    </div>
+  </div>
 </div>
 
 <div className="bg-white rounded-xl border border-slate-mid/10 shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden">
 <div className="p-6 border-b border-slate-mid/10 flex justify-between items-center bg-surface-gray">
-<h3 className="text-headline-md font-headline-md text-on-surface">ECOR Options Comparison</h3>
+<h3 className="text-headline-md font-headline-md text-on-surface">ECoR Results</h3>
 <button className="text-pwc-orange hover:text-primary-container text-label-sm font-label-sm flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">download</span> Export CSV
-                    </button>
+</button>
 </div>
-<div className="overflow-x-auto table-scroll">
-<table className="w-full text-left border-collapse min-w-[800px]">
+<div className="overflow-x-auto table-scroll pb-4">
+<table className="w-full text-left border-collapse min-w-[1100px]">
 <thead>
-<tr className="bg-surface-container-low text-label-sm font-label-sm text-secondary uppercase tracking-wider">
-<th className="p-4 border-b border-slate-mid/10 font-semibold w-1/4">Metric</th>
-<th className="p-4 border-b border-slate-mid/10 font-semibold">Current Program</th>
-<th className="p-4 border-b border-slate-mid/10 font-semibold bg-pwc-orange/5 border-l border-pwc-orange/20 text-pwc-orange">Option A (Aggressive Ret.)</th>
-<th className="p-4 border-b border-slate-mid/10 font-semibold">Option B (Conservative)</th>
+<tr className="bg-pwc-orange text-white text-sm font-semibold tracking-wide">
+<th className="p-4 border-b border-white/20 w-[24%] align-top">
+   <div className="font-bold mb-1 text-base tracking-widest text-white">Metric</div>
+</th>
+<th className="p-4 border-b border-white/20 align-top text-center w-[16%]">
+   <div className="font-bold mb-1 text-base text-white">Gross</div>
+</th>
+<th className="p-4 border-b border-white/20 align-top text-center w-[20%] border-l border-white/20">
+   <div className="font-bold mb-1 text-base text-white">Current</div>
+   <div className="text-[11px] text-white/80 font-normal leading-relaxed mt-2 opacity-90">
+     Deductible: 25 M<br/>
+     Limit: $3 B<br/>
+     Different sub-limits applicable
+   </div>
+</th>
+<th className="p-4 border-b border-white/20 align-top text-center w-[20%] bg-black/10 border-l border-white/20">
+   <div className="font-bold mb-1 text-base text-white">Option 1</div>
+   <div className="text-[11px] text-white/80 font-normal leading-relaxed mt-2 opacity-90">
+     Deductible: 25 M<br/>
+     Captive: $50 M P.O.<br/>
+     Limit: $3 B<br/>
+     Different sub-limits applicable
+   </div>
+</th>
+<th className="p-4 border-b border-white/20 align-top text-center w-[20%] border-l border-white/20">
+   <div className="font-bold mb-1 text-base text-white">Option 2</div>
+   <div className="text-[11px] text-white/80 font-normal leading-relaxed mt-2 opacity-90">
+     Deductible: 25 M<br/>
+     Captive: $50 M P.O., 100 M AGG<br/>
+     Limit: $3 B<br/>
+     Different sub-limits applicable
+   </div>
+</th>
 </tr>
 </thead>
-<tbody className="font-tabular-nums text-tabular-nums text-on-surface">
+<tbody className="font-tabular-nums text-sm text-on-surface">
+{/* Row 1 */}
 <tr className="border-b border-slate-mid/5 hover:bg-surface-gray/50 transition-colors">
-<td className="p-4 font-body-md text-secondary">Primary Limit</td>
-<td className="p-4">$5,000,000</td>
-<td className="p-4 bg-pwc-orange/5 border-l border-pwc-orange/20">$10,000,000</td>
-<td className="p-4">$2,000,000</td>
+<td className="p-4 font-body-md text-secondary leading-tight">
+   Total Market Premium (MP)<br/>
+   <span className="text-[10px] text-slate-mid italic">For Options 1-2 keeps ECoR at the level of the current program</span>
+</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center">24,000,000</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10">
+   18,000,000<br/>
+   <span className="text-green-600 text-xs font-semibold">(-6,000,000)</span>
+</td>
+<td className="p-4 text-center border-l border-slate-mid/10">
+   19,000,000<br/>
+   <span className="text-green-600 text-xs font-semibold">(-5,000,000)</span>
+</td>
 </tr>
+{/* Row 2 */}
 <tr className="border-b border-slate-mid/5 bg-surface-gray/30 hover:bg-surface-gray/80 transition-colors">
-<td className="p-4 font-body-md text-secondary">Premium</td>
-<td className="p-4">$4,200,000</td>
-<td className="p-4 bg-pwc-orange/5 border-l border-pwc-orange/20 text-green-700">$3,150,000</td>
-<td className="p-4 text-pwc-red">$5,800,000</td>
+<td className="p-4 font-body-md text-secondary leading-tight">
+   Average Retained Loss (AR)<br/>
+   <span className="text-[10px] text-slate-mid italic">(Based on 100,000 simulations)</span>
+</td>
+<td className="p-4 text-center text-slate-mid">63,000,000</td>
+<td className="p-4 text-center">39,000,000</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-green-700">38,000,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-green-700">38,000,000</td>
 </tr>
+{/* Row 3 */}
 <tr className="border-b border-slate-mid/5 hover:bg-surface-gray/50 transition-colors">
-<td className="p-4 font-body-md text-secondary">Expected Retained Losses</td>
-<td className="p-4">$12,500,000</td>
-<td className="p-4 bg-pwc-orange/5 border-l border-pwc-orange/20 text-pwc-red">$14,200,000</td>
-<td className="p-4 text-green-700">$10,100,000</td>
+<td className="p-4 font-body-md text-secondary leading-tight">
+   Average Captive/SIR Loss (AC)<br/>
+   <span className="text-[10px] text-slate-mid italic">(Based on 100,000 simulations)</span>
+</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-pwc-red">5,000,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-pwc-red">5,000,000</td>
 </tr>
+{/* Row 4 */}
 <tr className="border-b border-slate-mid/5 bg-surface-gray/30 hover:bg-surface-gray/80 transition-colors">
-<td className="p-4 font-body-md text-secondary">Collateral Requirement</td>
-<td className="p-4">$6,000,000</td>
-<td className="p-4 bg-pwc-orange/5 border-l border-pwc-orange/20">$8,500,000</td>
-<td className="p-4">$4,500,000</td>
+<td className="p-4 font-body-md text-secondary">
+   Captive Fixed Costs and Fronting Fees (EXPC) <span className="text-[10px] text-slate-mid italic">(Assumed¹)</span>
+</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-pwc-red">600,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-pwc-red">600,000</td>
 </tr>
-<tr className="hover:bg-surface-gray/50 transition-colors font-bold text-headline-md">
-<td className="p-4 text-on-surface">Total ECOR</td>
-<td className="p-4">$22,700,000</td>
-<td className="p-4 bg-pwc-orange/10 border-l border-pwc-orange/30 text-pwc-orange">$25,850,000</td>
-<td className="p-4">$20,400,000</td>
+{/* Row 5 */}
+<tr className="border-b border-slate-mid/5 hover:bg-surface-gray/50 transition-colors">
+<td className="p-4 font-body-md text-secondary">
+   IRC (Based on 11% WACC)
+</td>
+<td className="p-4 text-center text-slate-mid">17,000,000</td>
+<td className="p-4 text-center">10,000,000</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-pwc-red">11,000,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-green-700">10,000,000</td>
 </tr>
+{/* Row 6 */}
+<tr className="border-b border-slate-mid/5 bg-surface-gray/30 hover:bg-surface-gray/80 transition-colors">
+<td className="p-4 font-body-md text-secondary">
+   IRC Captive
+</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-pwc-red">1,000,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-pwc-red">1,000,000</td>
+</tr>
+
+{/* Row 7 - TOTAL ECOR - Emphasized */}
+<tr className="border-b border-slate-mid/10 bg-primary text-white font-bold text-base shadow-sm tracking-wide">
+<td className="p-4">ECOR (=AR+AC+MP+IRC)</td>
+<td className="p-4 text-center text-white/80">80,000,000</td>
+<td className="p-4 text-center">73,000,000</td>
+<td className="p-4 text-center border-l border-white/20 bg-black/10">72,000,000</td>
+<td className="p-4 text-center border-l border-white/20">72,000,000</td>
+</tr>
+
+
+{/* Row 9 */}
+<tr className="border-b border-slate-mid/5 bg-surface-gray/30 hover:bg-surface-gray/80 transition-colors">
+<td className="p-4 font-body-md text-secondary">1/250 Retained Loss Event incl. Captive</td>
+<td className="p-4 text-center text-slate-mid">2,800,000,000</td>
+<td className="p-4 text-center">681,000,000</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-pwc-red">681,000,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-pwc-red">681,000,000</td>
+</tr>
+{/* Row 10 */}
+<tr className="border-b border-slate-mid/5 hover:bg-surface-gray/50 transition-colors">
+<td className="p-4 font-body-md text-secondary">Average Transferred Loss</td>
+<td className="p-4 text-center">0</td>
+<td className="p-4 text-center">23,000,000</td>
+<td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10 text-pwc-red">20,000,000</td>
+<td className="p-4 text-center border-l border-slate-mid/10 text-pwc-red">20,000,000</td>
+</tr>
+
 </tbody>
 </table>
 </div>

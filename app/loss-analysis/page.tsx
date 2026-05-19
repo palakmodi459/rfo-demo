@@ -128,7 +128,7 @@ export default function Page() {
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="bg-surface-container-lowest border border-slate-mid/10 rounded-xl p-6 shadow-sm">
 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Expected Annual Loss</p>
-<p className="font-headline-lg text-headline-lg text-on-surface font-tabular-nums">$42.5M</p>
+<p className="font-headline-lg text-headline-lg text-on-surface font-tabular-nums">$63M</p>
 <div className="mt-4 flex items-center gap-2 text-secondary">
 <span className="material-symbols-outlined text-[16px]">trending_up</span>
 <span className="font-body-md text-body-md text-sm">+2.4% vs last period</span>
@@ -136,18 +136,18 @@ export default function Page() {
 </div>
 <div className="bg-surface-container-lowest border border-slate-mid/10 rounded-xl p-6 shadow-sm">
 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Total Retained Exposure</p>
-<p className="font-headline-lg text-headline-lg text-on-surface font-tabular-nums text-pwc-orange">$18.2M</p>
+<p className="font-headline-lg text-headline-lg text-on-surface font-tabular-nums text-pwc-orange">$39M</p>
 <div className="mt-4 flex items-center gap-2 text-secondary">
 <span className="material-symbols-outlined text-[16px]">pie_chart</span>
-<span className="font-body-md text-body-md text-sm">42.8% of Total Expected</span>
+<span className="font-body-md text-body-md text-sm">61.9% of Total Expected</span>
 </div>
 </div>
 <div className="bg-surface-container-lowest border border-slate-mid/10 rounded-xl p-6 shadow-sm">
 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Risk Transfer Cost (Premium)</p>
-<p className="font-headline-lg text-headline-lg text-on-surface font-tabular-nums">$8.9M</p>
+<p className="font-headline-lg text-headline-lg text-on-surface font-tabular-nums">$24M</p>
 <div className="mt-4 flex items-center gap-2 text-secondary">
 <span className="material-symbols-outlined text-[16px]">shield</span>
-<span className="font-body-md text-body-md text-sm">For $150M limit</span>
+<span className="font-body-md text-body-md text-sm">For $3B limit</span>
 </div>
 </div>
 </div>
