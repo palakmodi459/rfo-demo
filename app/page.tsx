@@ -13,56 +13,58 @@ export default function Page() {
 
 
 <nav className="hidden md:flex flex-col h-full w-64 border-r border-slate-mid/10 bg-surface-container-low dark:bg-surface-dim fixed left-0 top-0 z-40 pt-16">
-<div className="px-6 mb-8">
+<div className="px-6 mb-8 mt-6">
 <div className="flex items-center gap-3 mb-6">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" />
-<div>
-<h2 className="text-headline-md font-headline-md font-bold text-on-surface">Risk Analytics</h2>
-<p className="text-label-sm font-label-sm text-secondary">Suite v4.2</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain shrink-0" />
+<div className="flex flex-col">
+<h2 className="text-headline-md font-headline-md font-bold text-on-surface leading-tight text-[18px]">Risk<br/>Analytics</h2>
+<p className="text-label-sm font-label-sm text-secondary mt-1">Suite v4.2</p>
 </div>
 </div>
-<button className="w-full bg-pwc-orange text-white py-2 px-4 rounded font-label-sm text-label-sm hover:bg-primary-container transition-colors duration-200">Export Report</button>
 </div>
 <ul className="flex-1 px-4 space-y-1">
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="/">
 <span className="material-symbols-outlined">strategy</span>
 <span className="text-label-sm font-label-sm">Risk Strategy</span>
 </Link>
 </li>
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/optimizer">
 <span className="material-symbols-outlined">query_stats</span>
 <span className="text-label-sm font-label-sm">Program Optimizer</span>
 </Link>
 </li>
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/loss-analysis">
 <span className="material-symbols-outlined">analytics</span>
 <span className="text-label-sm font-label-sm">Loss Analysis</span>
 </Link>
 </li>
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/captive-feasibility">
 <span className="material-symbols-outlined">shield</span>
 <span className="text-label-sm font-label-sm">Captive Feasibility</span>
 </Link>
 </li>
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/portfolio">
 <span className="material-symbols-outlined">insights</span>
 <span className="text-label-sm font-label-sm">Portfolio Insights</span>
 </Link>
 </li>
 </ul>
+<div className="px-4 pb-4">
+<button className="w-full bg-pwc-orange text-white py-2 px-4 rounded font-label-sm text-label-sm hover:bg-primary-container transition-colors duration-200">Export Report</button>
+</div>
 <ul className="px-4 pb-6 space-y-1 border-t border-slate-mid/10 pt-4">
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
 <span className="material-symbols-outlined">help</span>
 <span className="text-label-sm font-label-sm">Support</span>
 </Link>
 </li>
-<li className="">
+<li className=" ">
 <Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
 <span className="material-symbols-outlined">logout</span>
 <span className="text-label-sm font-label-sm">Sign Out</span>
@@ -297,12 +299,12 @@ export default function Page() {
 <td className="p-4 text-center">0</td>
 <td className="p-4 text-center">24,000,000</td>
 <td className="p-4 text-center bg-pwc-orange/5 border-l border-pwc-orange/10">
-   18,000,000<br/>
-   <span className="text-green-600 text-xs font-semibold">(-6,000,000)</span>
+   17,400,000<br/>
+   <span className="text-green-600 text-xs font-semibold">(-6,600,000)</span>
 </td>
 <td className="p-4 text-center border-l border-slate-mid/10">
-   19,000,000<br/>
-   <span className="text-green-600 text-xs font-semibold">(-5,000,000)</span>
+   19,400,000<br/>
+   <span className="text-green-600 text-xs font-semibold">(-4,600,000)</span>
 </td>
 </tr>
 {/* Row 2 */}
@@ -363,8 +365,8 @@ export default function Page() {
 <td className="p-4">ECOR (=AR+AC+MP+IRC)</td>
 <td className="p-4 text-center text-white/80">80,000,000</td>
 <td className="p-4 text-center">73,000,000</td>
-<td className="p-4 text-center border-l border-white/20 bg-black/10">72,000,000</td>
-<td className="p-4 text-center border-l border-white/20">72,000,000</td>
+<td className="p-4 text-center border-l border-white/20 bg-black/10">73,000,000</td>
+<td className="p-4 text-center border-l border-white/20">73,000,000</td>
 </tr>
 
 

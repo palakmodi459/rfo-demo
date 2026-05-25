@@ -4,68 +4,68 @@ export default function Page() {
     <>
 
 
-<header className="flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-50 border-b border-slate-mid/10 bg-surface dark:bg-surface-container-high">
-<div className="flex items-center gap-4"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></div>
 
-<div className="flex items-center gap-6">
-<div className="relative hidden md:block">
-<span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
-<input className="pl-9 pr-4 py-1.5 bg-surface-container-highest border-b border-slate-mid/30 focus:border-pwc-orange focus:ring-0 outline-none text-tabular-nums font-tabular-nums w-64 transition-colors" placeholder="Search..." type="text" />
-</div>
-<div className="flex items-center gap-4 text-on-surface-variant dark:text-on-secondary-fixed-variant"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain" /></div>
-</div>
-</header>
 <div className="flex flex-1 overflow-hidden">
 
-<nav className="hidden md:flex flex-col h-full w-64 border-r border-slate-mid/10 fixed left-0 top-0 z-40 pt-16 bg-surface-container-low dark:bg-surface-dim transition-all duration-200 ease-in-out">
-<div className="p-6 pb-2">
-<div className="flex items-center gap-3 mb-2">
-<div className="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center border border-slate-mid/20">
-<span className="material-symbols-outlined text-pwc-orange">domain</span>
-</div>
-<div>
-<h2 className="text-headline-md font-headline-md font-bold text-on-surface text-sm">Risk Analytics</h2>
-<p className="text-label-sm font-label-sm text-on-surface-variant">Suite v4.2</p>
+<nav className="hidden md:flex flex-col h-full w-64 border-r border-slate-mid/10 bg-surface-container-low dark:bg-surface-dim fixed left-0 top-0 z-40 pt-16">
+<div className="px-6 mb-8 mt-6">
+<div className="flex items-center gap-3 mb-6">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain shrink-0" />
+<div className="flex flex-col">
+<h2 className="text-headline-md font-headline-md font-bold text-on-surface leading-tight text-[18px]">Risk<br/>Analytics</h2>
+<p className="text-label-sm font-label-sm text-secondary mt-1">Suite v4.2</p>
 </div>
 </div>
 </div>
-<div className="flex-1 overflow-y-auto py-4 flex flex-col gap-1">
-
-<Link className="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
+<ul className="flex-1 px-4 space-y-1">
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
 <span className="material-symbols-outlined">strategy</span>
 <span className="text-label-sm font-label-sm">Risk Strategy</span>
 </Link>
-
-<Link className="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/optimizer">
+</li>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/optimizer">
 <span className="material-symbols-outlined">query_stats</span>
 <span className="text-label-sm font-label-sm">Program Optimizer</span>
 </Link>
-
-<Link className="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/loss-analysis">
+</li>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/loss-analysis">
 <span className="material-symbols-outlined">analytics</span>
 <span className="text-label-sm font-label-sm">Loss Analysis</span>
 </Link>
-
-<Link className="flex items-center gap-3 px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/captive-feasibility">
+</li>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/captive-feasibility">
 <span className="material-symbols-outlined">shield</span>
 <span className="text-label-sm font-label-sm">Captive Feasibility</span>
 </Link>
-
-<Link className="flex items-center gap-3 px-6 py-3 text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="/">
-<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>insights</span>
+</li>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="/portfolio">
+<span className="material-symbols-outlined">insights</span>
 <span className="text-label-sm font-label-sm">Portfolio Insights</span>
 </Link>
+</li>
+</ul>
+<div className="px-4 pb-4">
+<button className="w-full bg-pwc-orange text-white py-2 px-4 rounded font-label-sm text-label-sm hover:bg-primary-container transition-colors duration-200">Export Report</button>
 </div>
-<div className="p-4 border-t border-slate-mid/10 flex flex-col gap-1">
-<Link className="flex items-center gap-3 px-4 py-2 text-secondary hover:bg-secondary-container/50 hover:text-on-surface rounded transition-colors" href="/">
-<span className="material-symbols-outlined text-sm">help</span>
+<ul className="px-4 pb-6 space-y-1 border-t border-slate-mid/10 pt-4">
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
+<span className="material-symbols-outlined">help</span>
 <span className="text-label-sm font-label-sm">Support</span>
 </Link>
-<Link className="flex items-center gap-3 px-4 py-2 text-secondary hover:bg-secondary-container/50 hover:text-on-surface rounded transition-colors" href="/">
-<span className="material-symbols-outlined text-sm">logout</span>
+</li>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
+<span className="material-symbols-outlined">logout</span>
 <span className="text-label-sm font-label-sm">Sign Out</span>
 </Link>
-</div>
+</li>
+</ul>
 </nav>
 
 <main className="flex-1 md:ml-64 bg-background min-h-[calc(100vh-4rem)] p-gutter md:p-margin-desktop overflow-y-auto">

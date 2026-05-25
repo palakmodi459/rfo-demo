@@ -4,72 +4,65 @@ export default function Page() {
     <>
 
 
-<nav className="fixed left-0 top-0 h-full w-64 border-r border-slate-mid/10 bg-surface-container-low dark:bg-surface-dim z-40 pt-16 flex flex-col justify-between">
-
-<div className="px-6 mb-8 flex flex-col items-start w-full">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto mb-4" />
-  <h2 className="text-headline-md font-headline-md font-bold text-on-surface">Risk Analytics</h2>
-  <p className="text-label-sm font-label-sm text-secondary mt-1">Suite v4.2</p>
+<nav className="hidden md:flex flex-col h-full w-64 border-r border-slate-mid/10 bg-surface-container-low dark:bg-surface-dim fixed left-0 top-0 z-40 pt-16">
+<div className="px-6 mb-8 mt-6">
+<div className="flex items-center gap-3 mb-6">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PwC Logo" className="h-10 w-auto object-contain shrink-0" />
+<div className="flex flex-col">
+<h2 className="text-headline-md font-headline-md font-bold text-on-surface leading-tight text-[18px]">Risk<br/>Analytics</h2>
+<p className="text-label-sm font-label-sm text-secondary mt-1">Suite v4.2</p>
 </div>
-
-<ul className="flex flex-col flex-grow">
-
-<li className="">
-<Link className="flex items-center px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="/">
-<span className="material-symbols-outlined mr-4 group-hover:text-primary transition-colors">strategy</span>
-<span className="text-label-sm font-label-sm uppercase tracking-wider">Risk Strategy</span>
+</div>
+</div>
+<ul className="flex-1 px-4 space-y-1">
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
+<span className="material-symbols-outlined">strategy</span>
+<span className="text-label-sm font-label-sm">Risk Strategy</span>
 </Link>
 </li>
-
-<li className="">
-<Link className="flex items-center px-6 py-3 text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="/">
-<span className="material-symbols-outlined mr-4" style={{ fontVariationSettings: "'FILL' 1" }}>query_stats</span>
-<span className="text-label-sm font-label-sm uppercase tracking-wider">Program Optimizer</span>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-primary font-bold border-r-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out" href="/optimizer">
+<span className="material-symbols-outlined">query_stats</span>
+<span className="text-label-sm font-label-sm">Program Optimizer</span>
 </Link>
 </li>
-
-<li className="">
-<Link className="flex items-center px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="/">
-<span className="material-symbols-outlined mr-4 group-hover:text-primary transition-colors">analytics</span>
-<span className="text-label-sm font-label-sm uppercase tracking-wider">Loss Analysis</span>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/loss-analysis">
+<span className="material-symbols-outlined">analytics</span>
+<span className="text-label-sm font-label-sm">Loss Analysis</span>
 </Link>
 </li>
-
-<li className="">
-<Link className="flex items-center px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="/">
-<span className="material-symbols-outlined mr-4 group-hover:text-primary transition-colors">shield</span>
-<span className="text-label-sm font-label-sm uppercase tracking-wider">Captive Feasibility</span>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/captive-feasibility">
+<span className="material-symbols-outlined">shield</span>
+<span className="text-label-sm font-label-sm">Captive Feasibility</span>
 </Link>
 </li>
-
-<li className="">
-<Link className="flex items-center px-6 py-3 text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out group" href="/">
-<span className="material-symbols-outlined mr-4 group-hover:text-primary transition-colors">insights</span>
-<span className="text-label-sm font-label-sm uppercase tracking-wider">Portfolio Insights</span>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/portfolio">
+<span className="material-symbols-outlined">insights</span>
+<span className="text-label-sm font-label-sm">Portfolio Insights</span>
 </Link>
 </li>
 </ul>
-
-<div className="p-6 border-t border-slate-mid/10">
-<button className="w-full bg-pwc-orange text-on-primary py-2 px-4 rounded-DEFAULT text-label-sm font-label-sm hover:bg-primary-container transition-colors mb-6 flex items-center justify-center">
-<span className="material-symbols-outlined mr-2 text-[18px]">download</span>
-                Export Report
-            </button>
-<ul className="flex flex-col space-y-2">
-<li className="">
-<Link className="flex items-center text-secondary hover:text-on-surface transition-colors" href="/">
-<span className="material-symbols-outlined mr-3 text-[18px]">help</span>
+<div className="px-4 pb-4">
+<button className="w-full bg-pwc-orange text-white py-2 px-4 rounded font-label-sm text-label-sm hover:bg-primary-container transition-colors duration-200">Export Report</button>
+</div>
+<ul className="px-4 pb-6 space-y-1 border-t border-slate-mid/10 pt-4">
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
+<span className="material-symbols-outlined">help</span>
 <span className="text-label-sm font-label-sm">Support</span>
 </Link>
 </li>
-<li className="">
-<Link className="flex items-center text-secondary hover:text-on-surface transition-colors" href="/">
-<span className="material-symbols-outlined mr-3 text-[18px]">logout</span>
+<li className=" ">
+<Link className="flex items-center gap-3 px-3 py-2 rounded text-secondary dark:text-on-secondary-fixed-variant hover:bg-secondary-container/50 dark:hover:bg-inverse-surface hover:text-on-surface transition-all duration-200 ease-in-out" href="/">
+<span className="material-symbols-outlined">logout</span>
 <span className="text-label-sm font-label-sm">Sign Out</span>
 </Link>
 </li>
 </ul>
-</div>
 </nav>
 
 <main className="ml-64 flex-grow flex flex-col min-h-screen">
